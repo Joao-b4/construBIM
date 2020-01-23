@@ -1,10 +1,18 @@
 body {
-	margin: 0;
-	background-color: #000;
-	color: #fff;
-	font-family: Monospace;
-	font-size: 13px;
-	line-height: 24px;
+	background-color: #ced4da;
+	/* background-image: linear-gradient(140deg, rgba(0, 93, 110, 0.70) 0%, rgb(248, 255, 174) 100%); */
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+
+.body-position-menu {
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #005d9775, #3637957e);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #005d9775, #3637957e);
+	position: absolute;
+	z-index: 100;
 }
 
 a {
@@ -50,4 +58,94 @@ a, button, input, select {
 	-ms-user-select: none;
 	user-select: none;
 	z-index: 2 !important; /* TODO Solve this in HTML */
+}
+
+#footer {
+	bottom: 2px;
+	left: 50%;
+	width: 60%;
+	min-height: 80px;
+	transform: translateX(-50%);
+}
+
+#header {
+	top: 2px;
+	left: 50%;
+	width: 60%;
+	transform: translateX(-50%);
+}
+
+#header .title {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#menu {
+	left: 2px;
+	top: 50%;
+	/* width: 100px; */
+	height: 350px;
+	transform: translateY(-50%);
+}
+
+#menu-issue {
+	right: 2px;
+	top: 50%;
+	width: 250px;
+	height: 90vh;
+	transform: translateY(-50%);
+}
+#menu-issue #list-issue{
+	overflow: auto;
+	height: 90%;
+} 
+
+#menu span {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: center;
+}
+
+.cursor-click {
+	cursor: pointer;
+}
+
+.form {
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin: 15px;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.title-accordium {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.flex-2 {
+	flex: 2;
+}
+
+.modal-content{
+	background-color: transparent !important;
+	border: 0px solid transparent !important;
+}
+
+/* displays */
+.display-none {
+	display: none;
+}
+
+.display-flex {
+	display: flex;
+}
+
+.display-block {
+	display: block;
 }
