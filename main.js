@@ -124,7 +124,7 @@ const issue = {
 
         //events
         domNewIssue.addEventListener("click", function (event) {
-            OBJ_selected.forEach((key, element) => {
+            OBJ_selected.forEach((element,key ) => {
                 if (element != undefined) {
                     issue.textLoad(element.id);
                     $("#bim-modal").modal('show');
@@ -225,6 +225,7 @@ const issue = {
                         w: localOBJ.quaternion.w
                     }
                     eventsObject.unSetColorAll();
+                    objectById.visible = true;
 
                     if (!ObjectsHasClickedChangeColor.has(element)) {
                         if (ObjectsHasClickedChangeColor.size < 1) {
@@ -246,8 +247,7 @@ const issue = {
                             camera.lookAt(0, 0, 0);
 
                             controls.position0.copy(localOBJ.controls);
-
-                            console.log(controls);
+                            console.log(objectById);
                             //update render and camera
                             controls.update()
                         }
@@ -262,11 +262,11 @@ const issue = {
 
     },
     clearAll: ()=>{
-        const element = document.getElementById("clear-all");
-        element.addEventListener("click",function(event){
-            localStorage.clear();
-            issue.load();
-        });
+        // const element = document.getElementById("clear-all");
+        // element.addEventListener("click",function(event){
+        //     localStorage.clear();
+        //     issue.load();
+        // });
     },
     clear: ()=>{
 
